@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Book Store</title>
+    <meta name="description" content="This is our book store" />
+</head>
+
+<body>
+    <div>
+        <h1>Book Store</h1>
+        <p> This is my book store, welcome</p>
+    </div>
+
+    <hr />
+    <div>
+        new form with action
+    </div>
+    <br />
+    <br />
+
+
+    <!--to send data to server ==== name attribute in input + action in form-->
+    <!--get by5ly el bayanat teban fel url
+        post by5fy el bayanat mn el url-->
+    <!--byb3t el data submitted le malaf backend
+    action="" da keda byb3tha le nafs el saf7a el 2ana wa2ef feeha-->
+    <!--form 
+        novalidate for testing purposes
+        target=_blank when savingfor testing purposes-->
+    <form class="email with action" action="osama.php" method="get">
+        <input type="hidden" value="for hashing msln bytb3t m3 el backend" />
+        <!--name ... label 3shan lama yegy yeb3t lel backend ... mohm-->
+        <!--
+        action for form
+        method for form
+    for input
+        hidden ... sent to backend but hidden from user ... value can be hashed
+        readonly ... value can't be changed but can be sent to backend
+        disabled ... value can't be changed & can't be sent to backend
+        autofocus ... to write in that field after opening the page
+        minlength/max ... for pass specific length validation
+        placeholder ... for text inside field for guidance
+        type=color,email,password,text,submit,reset
+        type=range or number
+            min
+            max
+            step
+        value ... to provide a specific name/string to the field
+        required
+        placeholder
+        radio or checkbox ... checked ... label ... link with id ... label for id
+        '-->
+        <div>
+            <label>username</label>
+            <input type="text" required placeholder="username inside" name="user" value="osama" readonly />
+        </div>
+        <br />
+        <div>
+            <label>subject</label>
+            <input type="text" name="subject" autofocus />
+        </div>
+
+        <br />
+        <div>
+            <label>password</label>
+            <input type="password" required placeholder="please write complex pass" name="pass" minlength="6" />
+        </div>
+        <br />
+        <div>
+            <label>email</label>
+            <input type="email" required placeholder="email" name="email" value="s@s" disabled />
+        </div>
+        <br />
+        <div>
+            <label>color</label>
+            <input type="color" required name="color" />
+        </div>
+        <br />
+        <div>
+            <label>range</label>
+            <input type="range" required name="range" min="0" max="100" step="20" value="0" />
+        </div>
+        <br />
+        <div>
+            <label>number</label>
+            <input type="number" required name="number" min="0" max="100" step="10" value="0" />
+        </div>
+        <div>
+            <input id="win" type="radio" name="os" value="windows" checked />
+            <label for="win">windows</label>
+        </div>
+        <div>
+            <input type="radio" name="os" value="linux" />
+            <label>linux</label>
+        </div>
+        <div>
+            <input type="radio" name="os" value="mac" />
+            <label>mac</label>
+        </div>
+        <br />
+        <br />
+        <div>
+            <input id="win" type="checkbox" name="os" value="windows" checked />
+            <label for="win">windows</label>
+        </div>
+        <div>
+            <input type="checkbox" name="os" value="linux" />
+            <label>linux</label>
+        </div>
+        <div>
+            <input type="checkbox" name="os" value="mac" />
+            <label>mac</label>
+        </div>
+        <br />
+        <!--select
+        optgroup
+            option
+                selected ... value
+
+    textarea
+    -->
+        <label for="book"> choose book</label>
+        <select name="books" id="book">
+            <optgroup label="action">
+                <option value="1">Book1</option>
+                <option value="2">Book2</option>
+                <option value="3">Book3</option>
+            </optgroup>
+            <optgroup label="romance">
+                <option value="4" selected>Book4</option>
+                <option value="5">Book5</option>
+                <option value="6">Book6</option>
+            </optgroup>
+        </select>
+
+        <hr />
+        <br />
+
+        <textarea name="subject" placeholder="test text"></textarea>
+
+
+        <br />
+        <hr />
+        <!--input type=file
+        input type=search
+        input type=url
+            date
+            month
+            time
+
+    -->
+        <div>
+            <label>upload</label>
+            <input type="file" />
+        </div>
+
+
+        <br />
+        <hr />
+
+        <div>
+            <label>search</label>
+            <input type="search" />
+        </div>
+        <br />
+        <hr />
+
+
+        <div>
+            <label>url</label>
+            <input type="url" />
+        </div>
+        <br />
+        <hr />
+
+        <div>
+            <label>date</label>
+            <input type="date" />
+        </div>
+        <br />
+        <hr />
+
+        <div>
+            <label>month</label>
+            <input type="month" />
+        </div>
+        <br />
+        <hr />
+
+        <div>
+            <label>time</label>
+            <input type="time" />
+        </div>
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+        <br />
+        <hr />
+
+        <!--datalist ... good for search in a list-->
+        <div>
+            <label>programming lang</label>
+            <input list="programming" name="prog" />
+            <datalist id="programming">
+                <option value="python">
+                <option value="html">
+                <option value="js">
+            </datalist>
+        </div>
+        <br />
+        <hr />
+
+        <input type="submit" value="save" />
+        <input type="reset" />
+
+
+    </form>
+</body>
+</html>
